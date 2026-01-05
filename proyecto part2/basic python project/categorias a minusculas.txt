@@ -1,0 +1,16 @@
+# Lista original de categorías favoritas escritas en mayúsculas
+fav_categories = ['ELECTRONICS', 'SPORT', 'BOOKS']
+
+# 1. Lista vacía donde almacenaremos las categorías convertidas a minúsculas
+fav_categories_low = []
+
+# 2. Recorremos cada categoría en la lista original
+for category in fav_categories: # escribe tu código aquí
+    # 2. Convertimos la categoría a minúscula utilizando el método lower()
+    lowered_category = category.lower()# escribe tu código aquí
+
+    # 3. Agregamos la categoría convertida a la nueva lista
+    fav_categories_low.append(lowered_category)# escribe tu código aquí
+
+# 4. Mostramos en pantalla la lista resultante con las categorías en minúsculas
+print(fav_categories_low)

@@ -1,0 +1,23 @@
+users_clean = [['32415', ['mike', 'reed'], 32, ['electronics', 'sport', 'books'], [894, 213, 173]],
+         			 ['31980', ['kate', 'morgan'], 24, ['clothes', 'books'], [439, 390]],
+         			 ['32156', ['john', 'doe'], 37, ['electronics', 'home', 'food'], [459, 120, 99]],
+         			 ['32761', ['samantha', 'smith'], 29, ['clothes', 'electronics', 'beauty'], [299, 679, 85]],
+         			 ['32984', ['david', 'white'], 41, ['books', 'home', 'sport'], [234, 329, 243]],
+         			 ['33001', ['emily', 'brown'], 26, ['beauty', 'home', 'food'], [213, 659, 79]],
+         			 ['33767', ['maria', 'garcia'], 33, ['clothes', 'food', 'beauty'], [499, 189, 63]],
+         			 ['33912', ['jose', 'martinez'], 22, ['sport', 'electronics', 'home'], [259, 549, 109]],
+         			 ['34009', ['lisa', 'wilson'], 35, ['home', 'books', 'clothes'], [329, 189, 329]],
+         			 ['34278', ['james', 'lee'], 28, ['beauty', 'clothes', 'electronics'], [189, 299, 579]]]
+
+def get_clients_by_category(userlist,category): #definimos funcion
+    result = [] #creamos lista vacia result
+    for i in userlist: #vemos cada usuario
+        for cat in i[-2]: #vemos cada categoria de cada usuario
+            if cat==category: #si alguna tiene la categoria deseada
+                result.append([i[0],i[1],i[2],sum(i[-1])])
+                #agregamos usuario, nombre, edad y gasto total
+    return result
+
+# Prueba con la categoría 'home'
+filtered = get_clients_by_category(users_clean, 'home')
+print(filtered)
