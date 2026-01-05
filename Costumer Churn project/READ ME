@@ -1,0 +1,1 @@
+I developed a Machine Learning model using LightGBM to predict customer churn in a telecommunications company, implementing EDA, class balancing and hyperparameter optimization strategies to improve the model's accuracy by 10% compared to the baseline, obtaining a final AUC-ROC of 0.89 that allowed me to find the main churn factors.
