@@ -2,6 +2,7 @@
 
 import streamlit as st
 import joblib
+import os
 
 # Configuración de la página
 st.set_page_config(page_title="Amazon Sentiment AI", page_icon="📦")
