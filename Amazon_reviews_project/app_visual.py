@@ -9,8 +9,6 @@ st.set_page_config(page_title="Amazon Sentiment AI", page_icon="📦")
 st.title("Analizador de Sentimientos con IA")
 st.markdown("Esta aplicación usa un modelo **LightGBM** entrenado con millones de reseñas de Amazon para clasificar comentarios.")
 
-# Carga de modelos
-@st.cache_resource # Esto evita que el modelo se recargue en cada clic, ahorrando RAM
 
 base_path = os.path.dirname(__file__)
 model_path = os.path.join(base_path, 'modelo_amazon.pkl')
