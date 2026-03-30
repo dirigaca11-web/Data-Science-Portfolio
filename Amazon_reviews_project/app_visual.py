@@ -5,9 +5,9 @@ import joblib
 import os
 
 # Configuración de la página
-st.set_page_config(page_title="Amazon Sentiment AI", page_icon="📦")
+st.set_page_config(page_title="Amazon sentiment AI", page_icon="📦")
 
-st.title("Analizador de Sentimientos con IA")
+st.title("Analizador de sentimientos con IA")
 st.markdown("Esta aplicación usa un modelo **LightGBM** entrenado con millones de reseñas de Amazon para clasificar comentarios.")
 
 
@@ -21,7 +21,7 @@ vectorizer = joblib.load(vect_path)
 # Interfaz de usuario
 review_input = st.text_area("Introduce la reseña en inglés:", placeholder="Example: This product is amazing, I love the...")
 
-if st.button("Analizar Sentimiento"):
+if st.button("Analizar sentimiento"):
     if review_input.strip() != "":
         # 1. Limpieza básica
         clean_text = review_input.lower().replace(r"[^a-zA-Z\s]", "")
@@ -37,6 +37,6 @@ if st.button("Analizar Sentimiento"):
             st.success("✨ Sentimiento: POSITIVO")
             st.balloons()
         else:
-            st.error("re: Sentimiento: NEGATIVO")
+            st.error("🤔 Sentimiento: NEGATIVO")
     else:
-        st.warning("Por favor, escribe algo primero.")
+        st.warning("Por favor, escribe una review primero.")
