@@ -11,12 +11,13 @@ st.markdown("Esta aplicación usa un modelo **LightGBM** entrenado con millones 
 
 # Carga de modelos
 @st.cache_resource # Esto evita que el modelo se recargue en cada clic, ahorrando RAM
-def load_models():
-    model = joblib.load('modelo_amazon.pkl')
-    vectorizer = joblib.load('vectorizador.pkl')
-    return model, vectorizer
 
-model, vectorizer = load_models()
+base_path = os.path.dirname(__file__)
+model_path = os.path.join(base_path, 'modelo_amazon.pkl')
+vect_path = os.path.join(base_path, 'vectorizador.pkl')
+    
+model = joblib.load(model_path)
+vectorizer = joblib.load(vect_path)
 
 # Interfaz de usuario
 review_input = st.text_area("Introduce la reseña en inglés:", placeholder="Example: This product is amazing, I love the...")
